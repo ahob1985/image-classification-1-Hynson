@@ -40,7 +40,9 @@ function gotResults(error, results) {
 
   } else {
 
-    console.log(results);
-
+    //console.log(results);
+    let label = results[0].label;
+    let confidence = round(results[0].confidence, 2);
+    textP.html("Label: " + label + " - Confidence " + confidence);
   }
 }
